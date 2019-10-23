@@ -1,7 +1,9 @@
-
 <nav class="container" style="margin-top: 15px">
-  <a routerLink='/employees' style="padding: 30px">Employees</a>
-  <a routerLink='/create'>Create</a>
+  <a class="navbar-brand" routerLink='/employees' >Employees</a>
+  <a class="navbar-brand" routerLink='/create'>Create</a>
+  <a class="navbar-brand" routerLink="/login" *ngIf="!loggedIn">Login</a>
+  <a class="navbar-brand" href="#" (click)="logout($event)" *ngIf="loggedIn">Logout</a>
+  <a class="navbar-brand" routerLink="profile" *ngIf="loggedIn">Profile</a>
 </nav>
 
 <router-outlet></router-outlet>

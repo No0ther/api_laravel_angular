@@ -18,3 +18,7 @@ Route::get('employees/{id}', 'EmployeeController@show');
 Route::post('employees', 'EmployeeController@store');
 Route::put('employees/{id}', 'EmployeeController@update');
 Route::delete('employees/{id}', 'EmployeeController@delete');
+
+Route::post('login', 'AuthController@login');
+Route::post('signup', 'AuthController@signup');
+Route::post('logout', 'AuthController@logout');

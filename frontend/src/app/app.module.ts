@@ -9,6 +9,12 @@ import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+
+import { JarwisService } from './jarwis.service';
+import { TokenService } from './token.service';
+import { AuthService } from './auth.service';
 
 
 @NgModule({
@@ -17,7 +23,9 @@ import { AppRoutingModule } from './app-routing.module';
     CreateEmployeeComponent,
     ListEmployeeComponent,
     // DetailEmployeeComponent,
-    EditEmployeeComponent
+    EditEmployeeComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +34,9 @@ import { AppRoutingModule } from './app-routing.module';
     HttpClientModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [
+    JarwisService, TokenService, AuthService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
