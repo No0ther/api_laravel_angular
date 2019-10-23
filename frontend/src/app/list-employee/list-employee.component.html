@@ -1,0 +1,25 @@
+<div class="container" style="margin-top: 15px">
+        <h2>List of Employees</h2>
+        <table class="table table-borderless table-dark"  id="table1" >
+            <thead class="thead-light">
+                    <tr class="tasks">
+                        <th >Name </th>
+                        <th >Email</th>
+                        <th >Address</th>
+                        <th >Phone</th>
+                    </tr>
+            </thead>
+    
+            <tbody>
+                <tr *ngFor="let employee of employees;" class="employees" >
+                    <td>{{ employee.name }}</td>
+                    <td>{{ employee.email}}</td>
+                    <td>{{ employee.address}}</td>
+                    <td>{{ employee.phone }}</td>
+                    <a routerLink='/employee/{{employee.id}}'><button class="btn btn-primary">Edit</button></a>
+                    <button class="btn btn-danger" (click)="delete(employee)">Delete</button>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
