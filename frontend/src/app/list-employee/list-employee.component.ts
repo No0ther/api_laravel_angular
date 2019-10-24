@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Employee } from 'src/model/employee';
 import { EmployeesService } from '../employees.service';
 
+
 @Component({
   selector: 'app-list-employee',
   templateUrl: './list-employee.component.html',
@@ -11,8 +12,12 @@ export class ListEmployeeComponent implements OnInit {
 
   employees: Employee[];
   editEmployee: Employee;
+  
 
-  constructor(private employeeService: EmployeesService) { }
+  constructor(
+    private employeeService: EmployeesService,
+    
+    ) { }
 
   ngOnInit() {
     this.getEmployees();
@@ -30,5 +35,7 @@ export class ListEmployeeComponent implements OnInit {
   edit (employee) {
     this.editEmployee = employee;
   }
+
+  
 
 }

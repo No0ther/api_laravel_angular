@@ -8,7 +8,7 @@ import { SignupComponent } from './signup/signup.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/employees', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'employee/:id', component: EditEmployeeComponent},
   { path: 'create', component: CreateEmployeeComponent},
   { path: 'employees' , component: ListEmployeeComponent },

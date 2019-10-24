@@ -1,0 +1,5 @@
+<div class="container">
+    <a class="navbar-brand" *ngIf="loggedIn" routerLink='/employees'>Employees</a>
+    <a class="navbar-brand" *ngIf="loggedIn" routerLink='/create'>Create</a>
+    <a class="navbar-brand" href="#" (click)="logout($event)" *ngIf="loggedIn" style="float: right;">Logout</a>
+</div>

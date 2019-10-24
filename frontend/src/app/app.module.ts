@@ -15,6 +15,7 @@ import { SignupComponent } from './signup/signup.component';
 import { JarwisService } from './jarwis.service';
 import { TokenService } from './token.service';
 import { AuthService } from './auth.service';
+import { NarvigatorComponent } from './narvigator/narvigator.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { AuthService } from './auth.service';
     // DetailEmployeeComponent,
     EditEmployeeComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    NarvigatorComponent
   ],
   imports: [
     BrowserModule,
