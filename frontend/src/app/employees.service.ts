@@ -5,6 +5,7 @@ import { Observable, of } from 'rxjs';
 import { Employee } from '../model/employee';
 import { catchError } from 'rxjs/operators';
 import { MessageService } from './message.service';
+import { TokenService } from './token.service';
 
 
 @Injectable({
@@ -17,24 +18,32 @@ export class EmployeesService {
   constructor(
     private messageService: MessageService,
     private http: HttpClient,
+    private tokenService: TokenService 
   ) { }
 
   getEmployees(): Observable<Employee[]> {
+    const TOKEN = this.tokenService.get();
+    const header = { "Authorization": "bearer "+TOKEN};
     return this.http
-      .get<Employee[]>('api/employees')
+      .get<Employee[]>('api/employees',  {headers: header})
       .pipe(catchError(this.handleError('getEmployee', [])))
   }
 
   getEmployee(id: number): Observable<Employee> {
+    const TOKEN = this.tokenService.get();
+    const header = { "Authorization": "bearer "+TOKEN};
+    console.log(header);
     return this.http
-      .get<Employee>(`api/employees/${id}`)
+      .get<Employee>(`api/employees/${id}`, {headers: header})
       .pipe(catchError(this.handleError<Employee>(`getEmployee id = ${id}`)))
   }
 
 
   addEmployee(employee: Employee): Observable<Employee> {
+    const TOKEN = this.tokenService.get();
+    const header = { "Authorization": "bearer "+TOKEN};
     return this.http
-      .post<Employee>('api/employees', employee)
+      .post<Employee>('api/employees', employee,  {headers: header})
       .pipe(catchError(this.handleError('addEmployee', employee)));
   }
 

@@ -5,15 +5,17 @@ import { CreateEmployeeComponent } from './create-employee/create-employee.compo
 import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { AfterLoginService } from './after-login.service';
+import { BeforeLoginService } from './before-login.service';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: 'employee/:id', component: EditEmployeeComponent},
-  { path: 'create', component: CreateEmployeeComponent},
-  { path: 'employees' , component: ListEmployeeComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'signup', component: SignupComponent}
+  { path: 'employee/:id', component: EditEmployeeComponent, canActivate: [AfterLoginService]},
+  { path: 'create', component: CreateEmployeeComponent, canActivate: [AfterLoginService]},
+  { path: 'employees' , component: ListEmployeeComponent, canActivate: [AfterLoginService]},
+  { path: 'login', component: LoginComponent, canActivate: [BeforeLoginService]},
+  { path: 'signup', component: SignupComponent, canActivate: [BeforeLoginService]}
 ];
 
 @NgModule({

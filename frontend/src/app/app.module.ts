@@ -16,6 +16,8 @@ import { JarwisService } from './jarwis.service';
 import { TokenService } from './token.service';
 import { AuthService } from './auth.service';
 import { NarvigatorComponent } from './narvigator/narvigator.component';
+import { AfterLoginService } from './after-login.service';
+import { BeforeLoginService } from './before-login.service';
 
 
 @NgModule({
@@ -37,7 +39,7 @@ import { NarvigatorComponent } from './narvigator/narvigator.component';
     AppRoutingModule,
   ],
   providers: [
-    JarwisService, TokenService, AuthService,
+    JarwisService, TokenService, AuthService, AfterLoginService, BeforeLoginService, 
   ],
   bootstrap: [AppComponent]
 })
