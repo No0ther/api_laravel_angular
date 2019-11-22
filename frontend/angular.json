@@ -37,7 +37,7 @@
                 }
               ],
               "optimization": true,
-              "outputHashing": "all",
+              "outputHashing": "thien",
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
