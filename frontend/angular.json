@@ -36,8 +36,9 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "optimization": true,
-              "outputHashing": "thien",
+              "optimization": true
+543545
+              "phuc"dasdsadsadsad543543543543
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
