@@ -36,8 +36,9 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "optimization": true,
-              "phuc",
+              "optimization": true
+sdsdsdsadsaddasdsadsadsa
+              "phuc"dasdsadsadsad
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
