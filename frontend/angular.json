@@ -36,9 +36,8 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "optimization": true
-543545
-              "phuc"dasdsadsadsad543543543543
+              "optimization": true,
+              "outputHashing": "all",
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
