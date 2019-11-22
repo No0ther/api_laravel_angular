@@ -37,7 +37,7 @@
                 }
               ],
               "optimization": true,
-              "outputHashing": "thien",
+              "outputHashing": "phuc",
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
